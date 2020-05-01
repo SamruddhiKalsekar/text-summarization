@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cloud</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+
+	<link rel="stylesheet" href="{{ url_for('static' , filename='cs/animate.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/owl.carousel.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/owl.theme.default.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/magnific-popup.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/aos.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/ionicons.min.css') }}"/>
+   <link rel="stylesheet" href="{{ url_for('static' , filename='cs/jquery.timepicker.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/flaticon.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/icomoon.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cs/style.css') }}"/>
+  </head>
+<body>
+
+  <form action="/summarize" method="post" >
+  
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="ihome.html">Natural Language Processing</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="/index" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+
+
+  <!-- <div class="js-fullheight"> -->
+    <div class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div id="particles-js"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Text Summarization</strong></h1>
+            <td style="width: 45%">
+              <div class="md-form mb-4 pink-textarea active-pink-textarea" style="width: 80%; margin-left: 50px;">
+                  <i class="fas fa-angle-double-right prefix"></i>
+                  <textarea type="text" id="text" name="text" class="md-textarea form-control" rows="5" required></textarea>
+                  <label for="form21" style="font-size: 20px;">Enter Text Article</label>
+                </div>
+                <div class="md-form" style="width: 40%; margin-left: 10%">
+                <input placeholder="Enter Number of Sentences: " type="Number" id="num_sentences" name="num_sentences" class="form-control">
+              </div>
+              <div class="md-form" style="width: 40%; margin-left: 10%">
+                <select class="browser-default custom-select" id="type_of_summ" name="type_of_summ" required>
+                  <option value="luhn" disabled selected>Choose method of Summarization</option>
+                  <option value="luhn">Luhn Algorithm</option>
+                </select>
+              </div>
+            </td>
+            <br></br>
+            <input type="submit" name="submit" value="submit"class="btn btn-primary btn-outline-white px-5 py-2">
+            <br></br>
+            <td style="padding-left: 50px;padding-bottom: 80px;">
+              <label for="summary" style="font-size: 25px;">Summary</label>
+              <p id="summary" style="font-size: 18px">{{ summary }}</p>
+            </td>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+ <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+</form>
+
+<script type="text/javascript"  src="{{ url_for('static', filename='js/sam.js') }}"></script>
+<script type="text/javascript"  src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/aos.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+  <!-- <script type="text/javascript"  src="{{ url_for('static', filename='js/jquery.timepicker.min.js') }}"></script> -->
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/particle.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/scrollax.min.js') }}"></script>
+  <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/google-map.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+
+
+
+</body>
+
+</html>
